@@ -9,9 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091208062134) do
+ActiveRecord::Schema.define(:version => 20091208075850) do
 
   create_table "dices", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rolls", :force => true do |t|
+    t.integer  "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

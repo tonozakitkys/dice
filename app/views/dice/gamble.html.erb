@@ -1,0 +1,18 @@
+<h2>丁半ゲーム</h2>
+
+<% form_tag do %>
+	<%= select_tag(:expected,
+		options_for_select(%W{丁 半},params[:expected])) %>
+	<%= submit_tag "勝負！" %>
+<% end %>
+
+<% unless @result.nil? -%>
+	1投目: <%= @roll[0] -%><br />
+	2投目: <%= @roll[1] -%><br /><br />
+	<% if @result == :win -%>
+		<strong style="color:blue">あなたの勝ちです。</strong>
+	<% else -%>
+		<strong style="color:red">あなたの負けです。</strong>
+	<% end -%>
+<% end -%>
+

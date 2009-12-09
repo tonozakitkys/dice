@@ -4,7 +4,15 @@
 	</head>
 	<body>
 		<h1>サイコロ</h1>
+		<ul>
+			<li><%= link_to("ホーム", :action => "index") %></li>
+			<li><%= link_to("サイコロを振る", :action => "shake") %></li>
+			<li><%= link_to("レポート", :action => "report") %></li>
+			<li><%= link_to("賭博", :action => "gamble") %></li>
+		</ul>
 		<%= yield %>
+		<hr />
+		<p>create by tt</p>
 	</body>
 </html>
 
